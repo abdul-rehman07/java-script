@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geting Two values from user</title>
+  </head>
+  <body>
+    <h1>hello world</h1>
+
+    <label for="fname">Enter the first value : </label>
+    <input type="number" id="finput" /><br />
+
+    <label for="operators">
+      Enter 1 for addition, Enter 2 for subtraction, Enter 3 for multiplication,
+      Enter 4 for division : </label
+    ><br />
+    <input type="number" id="sign" /><br />
+
+    <label for="sname">Enter the Second value :</label>
+    <input type="number" id="sinput" /><br />
+
+    <button id="btn" onclick="show()">click</button><br />
+  </body>
+  <script>
+    function show() {
+      var firstN = document.getElementById("finput").value;
+      var secondN = document.getElementById("sinput").value;
+      console.log(firstN);
+      console.log(secondN);
+      var operating = document.getElementById("sign").value;
+      console.log(operating);
+      switch (operating) {
+        case "1":
+          var sum = parseInt(firstN) + parseInt(secondN);
+          console.log("The sum of the two numbers is: " + sum);
+          break;
+        case "2":
+          var sum = parseInt(firstN) + parseInt(secondN);
+          console.log("The sum of the two numbers is: " + sum);
+          break;
+        case "3":
+          var multi = parseInt(firstN) * parseInt(secondN);
+          console.log("The multiple of the two numbers is: " + multi);
+          break;
+        case "4":
+          var divide = parseInt(firstN) / parseInt(secondN);
+          console.log("The division of the two numbers is: " + divide);
+          break;
+
+        default:
+          console.log("you enter wrong number");
+          break;
+      }
+    }
+  </script>
+</html>
