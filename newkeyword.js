@@ -12,7 +12,10 @@ user.prototype.getname = function () {
 
 var element = new user("hunny", 4);
 element.getcounts();
-element.getname();
+// element.getname();
+if (element.hasOwnProperty("name")) {
+  element.getname();
+}
 // console.log(element);
 
 var element2 = new user("bunny", 3);
